@@ -9,6 +9,10 @@ body {
     height: 6rem;
 }
 
+.App-carrito{
+    height: 3rem;
+}
+
  .App-header {
     background-color: #080808;
     font-family: "Josefin Sans", sans-serif;
@@ -29,4 +33,10 @@ a{
     text-decoration: none; 
     list-style: none;   
 }  
+
+.container h1{
+    padding: 1rem;
+   
+    font-family: "Josefin Sans", sans-serif;
+}
 
