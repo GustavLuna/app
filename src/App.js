@@ -1,15 +1,14 @@
 import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
+import Main from './components/Main'
 
-function App() {
+function App(props) {
 
     return (
         <>
             <header>
                 <NavBar />
+                <Main />
             </header>
-            <div><ItemListContainer greeting="a mi tienda" /></div>
-            
         </>
     )
 }
