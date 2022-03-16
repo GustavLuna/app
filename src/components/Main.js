@@ -4,7 +4,7 @@ const Main = (props) => {
 
     return (
         <main className="container">
-              <ItemListContainer/>
+              <ItemListContainer greeting = 'a mi tienda'/>
         </main>
     );
 }
