@@ -1,3 +1,14 @@
+html,
+body,
+#root {
+    height: 100vh;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     background-color: #bde0fe;
     margin: 0px;
@@ -9,11 +20,11 @@ body {
     height: 6rem;
 }
 
-.App-carrito{
+.App-carrito {
     height: 3rem;
 }
 
- .App-header {
+.App-header {
     background-color: #080808;
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.5rem;
@@ -22,34 +33,42 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-} 
-
-.nav-link{
-  padding: 2rem; 
 }
 
-a{
-    color:#219ebc;
-    text-decoration: none; 
-    list-style: none;   
-}  
+.nav-link {
+    padding: 2rem;
+}
 
-.container h1{
+a {
+    color: #219ebc;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container h1 {
     padding: 1rem;
     font-family: "Josefin Sans", sans-serif;
 }
 
-.container p{
+.container p {
     padding-left: 1rem;
     font-family: "Josefin Sans", sans-serif;
 }
-.itemContainer button{
+
+.itemContainer button {
     padding: .5rem;
     margin-left: .5rem;
     font-family: "Josefin Sans", sans-serif;
-
 }
 
 img {
     height: 6rem;
+}
+
+.producto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
 }
