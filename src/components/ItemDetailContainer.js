@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
 import ItemDetail from "./ItemDetail"
 
-let productosIniciales = 
-    {
+let productosIniciales = {
         id: 1,
         nombre: "Producto 1",
         precio: 100
@@ -36,13 +35,17 @@ let productosIniciales =
 
     return (
         <>
+
             <h1>Bienvenidos {props.greeting}!</h1>
             <p className="container">{loading ? "Cargando..." : "Ya tenes los productos"}</p>
-            <ItemDetail productos={productos} />
+            <section className='producto'>
+   
+            {productos.map((producto) => {
+                return <ItemDetail key={producto.id} producto={producto} />
+            })}
+            </section>
         </>
     )
 }
-
-
 
 export default ItemDetailContainer;

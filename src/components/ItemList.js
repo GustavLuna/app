@@ -1,16 +1,15 @@
-import pantallareflectora from '../imagen/pantallareflectora.jpg';
-import Item from './Item'
+// import Item from './Item'
 
-const ItemList = ({ productos }) => {
+// const ItemList = ({ productos }) => {
 
-    return (
-        <section className='producto'>
+//     return (
+//         <section className='producto'>
             
-            {productos.map((producto) => {
-                return <Item key={producto.id} producto={producto} />
-            })}
-        </section>
-    )
-}
+//             {productos.map((producto) => {
+//                 return <Item key={producto.id} producto={producto} />
+//             })}
+//         </section>
+//     )
+// }
 
-export default ItemList;
+// export default ItemList;
