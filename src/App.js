@@ -1,15 +1,19 @@
 import NavBar from './components/NavBar'
 import Main from './components/Main'
+import { ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
+import { BrowserRouter } from "react-router-dom";
 
-function App(props) {
+
+function App() {
 
     return (
-        <>
-            <header>
-                <NavBar />
-                <Main />
-            </header>
-        </>
+        <BrowserRouter>
+            <header />
+            <NavBar />
+            <Main />
+            <ToastContainer />
+        </BrowserRouter>
     )
 }
 

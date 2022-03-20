@@ -3,7 +3,7 @@ import carrito from '../imagen/carrito.png';
 function CartWidget() {
     return (
         <>
-          <img src={carrito} className="App-carrito" alt="logo" />
+          {/* <img src={carrito} className="App-carrito" alt="logo" /> */}
         </>
     )
 }

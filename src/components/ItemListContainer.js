@@ -1,57 +1,62 @@
-// import { useState, useEffect } from "react"
-// import ItemList from "./ItemList";
+import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom";
+import ItemList from "./ItemList";
+import { toast } from "react-toastify"
 
-// let productosIniciales = [
-//     {
-//         id: 1,
-//         nombre: "Producto 1",
-//         precio: 100
-//     },
-//     {
-//         id: 2,
-//         nombre: "Producto 2",
-//         precio: 200
-//     },
-//     {
-//         id: 3,
-//         nombre: "Producto 3",
-//         precio: 300
-//     }
-// ]
+let productosIniciales = [
+    {
+        id: 1,
+        nombre: "Producto 1",
+        precio: 100
+    },
+    {
+        id: 2,
+        nombre: "Producto 2",
+        precio: 200
+    },
+    {
+        id: 3,
+        nombre: "Producto 3",
+        precio: 300
+    }
+]
 
-// const ItemListContainer = (props) => {
+const ItemListContainer = (props) => {
 
-//     const [loading, setLoading] = useState(true)
-//     const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [productos, setProductos] = useState([])
+    const {id} = useParams()
+    
 
-//     useEffect(() => {
+    useEffect(() => {
 
-//         const promesa = new Promise((res, rej) => {
-//             setTimeout(() => {
-//                 res(productosIniciales)
-//             }, 3000)
-//         })
+        const promesa = new Promise((res, rej) => {
+            setTimeout(() => {
+                console.log(id)
+                res(productosIniciales)
+            }, 3000)
+        })
 
-//         promesa
-//             .then((respuestaDeLaApi) => {
-//                 setProductos(productosIniciales)
-//             })
-//             .catch((errorDeLaApi) => {
-//                 console.log(errorDeLaApi)
+        promesa
+            .then((respuestaDeLaApi) => {
+                setProductos(productosIniciales)
+            })
+            .catch((errorDeLaApi) => {
+                toast.error("Error al cargar los productos")
 
-//             })
-//             .finally(() => {
-//                 setLoading(false)
-//             })
-//     }, [])
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [id])
 
-//     return (
-//         <>
-//             <h1>Bienvenidos {props.greeting}!</h1>
-//             <p className="container">{loading ? "Cargando..." : "Ya tenes los productos"}</p>
-//             <ItemList productos={productos} />
-//         </>
-//     )
-// }
+    return (
+        <>
+            <h1>Bienvenidos {props.greeting}!</h1>
+            <p className="container">{loading ? "Cargando..." : "Ya tenes los productos"}</p>
+            <ItemList productos={productos} />
+        </>
+    )
+}
 
-// export default ItemListContainer
+export default ItemListContainer

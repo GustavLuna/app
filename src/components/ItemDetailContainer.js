@@ -35,12 +35,8 @@ let productosIniciales = {
 
     return (
         <>
-
-            <h1>Bienvenidos {props.greeting}!</h1>
-            <p className="container">{loading ? "Cargando..." : "Ya tenes los productos"}</p>
             <section className='producto'>
-   
-            {productos.map((producto) => {
+               {productos.map((producto) => {
                 return <ItemDetail key={producto.id} producto={producto} />
             })}
             </section>

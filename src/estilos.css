@@ -17,11 +17,7 @@ body {
 }
 
 .App-logo {
-    height: 6rem;
-}
-
-.App-carrito {
-    height: 3rem;
+    height: 5rem;
 }
 
 .App-header {
@@ -29,14 +25,12 @@ body {
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.5rem;
     display: flex;
-    padding: .5rem;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
 .nav-link {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 a {
@@ -62,7 +56,7 @@ a {
 }
 
 img {
-    height: 6rem;
+    height: 3rem;
 }
 
 .producto {
@@ -71,4 +65,8 @@ img {
     grid-gap: 1rem;
     margin-top: 1rem;
     padding-left: 1rem;
+}
+
+article img {
+    height: 15rem;
 }
