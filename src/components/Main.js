@@ -4,15 +4,10 @@ import ItemDetailContainer from "./ItemDetailContainer";
 import CartWidget from '../components/CartWidget';
 import { toast } from "react-toastify"
 
-const Main = () => {
-
-    const handleToast = () => {
-        toast.info("Soy un toast")
-    }
+const Main = (props) => {
 
     return (
         <main className="container">
-              
               {/* <ItemListContainer greeting = 'a mi tienda'/> */}
               {/* <ItemDetailContainer greeting = 'a mi tienda'/> */}
               <Routes>

@@ -9,7 +9,7 @@ return(
     <img src={pantallareflectora} alt="" />
     <p>Precio : ${producto.precio}</p>
     <button>
-        <Link to={producto.id}> ver detalle</Link> </button>
+        <Link to={`${producto.id}`}> ver detalle</Link> </button>
     </article>
     )
 }
