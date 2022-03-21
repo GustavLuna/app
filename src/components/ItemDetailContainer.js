@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react"
-import ItemDetail from "./ItemDetail"
+import ItemCount from "./ItemCount"
+import { Link, useParams } from "react-router-dom"
 
 let productosIniciales = {
-        id: 1,
-        nombre: "Producto 1",
-        precio: 100
-    }
+    id: 1,
+    nombre: "Producto 1",
+    precio: 100
+}
 
-   const ItemDetailContainer = (props) => {
+const ItemDetailContainer = (props) => {
 
+    const [productos, setProductos] = useState({})
     const [loading, setLoading] = useState(true)
-    const [productos, setProductos] = useState([])
+    const [seleccionado, setSeleccionado] = useState(false)
 
     useEffect(() => {
 
@@ -33,12 +35,20 @@ let productosIniciales = {
             })
     }, [])
 
+    const onAdd = (unidadSeleccionada) => {
+        console.log("On Add desde el ItemDetailContainer")
+        if (unidadSeleccionada != undefined) {
+            setSeleccionado(unidadSeleccionada)
+        }
+    }
+
     return (
         <>
             <section className='producto'>
-               {productos.map((producto) => {
-                return <ItemDetail key={producto.id} producto={producto} />
-            })}
+                <h2>{productos.nombre}</h2>
+                <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                <p>{seleccionado ? "ya se selecciono algo!" : "No se eligion ninguna cantidad"}</p>
+                {seleccionado ? <Link to="/cartwidget">carrito</Link> : null}
             </section>
         </>
     )

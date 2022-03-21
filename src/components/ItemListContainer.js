@@ -7,27 +7,29 @@ let productosIniciales = [
     {
         id: 1,
         nombre: "Producto 1",
-        precio: 100
+        precio: 100,
+        categoria: 1
     },
     {
         id: 2,
         nombre: "Producto 2",
-        precio: 200
+        precio: 200,
+        categoria: 2
     },
     {
         id: 3,
         nombre: "Producto 3",
-        precio: 300
+        precio: 300,
+        categoria: 3
     }
 ]
 
 const ItemListContainer = (props) => {
 
-    const [loading, setLoading] = useState(true)
     const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
     const {id} = useParams()
     
-
     useEffect(() => {
 
         const promesa = new Promise((res, rej) => {

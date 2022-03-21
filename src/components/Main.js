@@ -12,7 +12,7 @@ const Main = () => {
 
     return (
         <main className="container">
-              <button onClick={handleToast}>Notificación</button>
+              
               {/* <ItemListContainer greeting = 'a mi tienda'/> */}
               {/* <ItemDetailContainer greeting = 'a mi tienda'/> */}
               <Routes>
